@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/head/Header';
+import ContextProvider from './context/Context';
+import CasesByTime from './webpages/cases-by-time';
+import Home from './webpages/home';
+import Statewise from './webpages/statewise';
+import Tested from './webpages/tested';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+      <Header />
+      <BrowserRouter >
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/cases-by-timeline' element={<CasesByTime />} />
+          <Route exact path='/statewise' element={<Statewise />} />
+          <Route exact path='/tested' element={<Tested />} />
+        </Routes>
+      </BrowserRouter>
+    </ContextProvider>
   );
 }
 
