@@ -28,7 +28,7 @@ export default function Home() {
 
       <Typography sx={{ fontSize: '20px', textAlign: 'center', my: 2 }} >Here is the link of the github repo for this site</Typography>
       <Box sx={{ textAlign: 'center' }}>
-        <a href="mailto:yashsharma2493@gmail.com" style={{ textDecoration: "none", color: 'black' }}><EmailIcon /></a>
+        <a href="https://github.com/Yash-Sharma2002/Corona-Tracker" style={{ textDecoration: "none", color: 'black' }}><GitHubIcon /></a>
       </Box>
     </Box>
   )
